@@ -82,10 +82,28 @@ a:focus-visible {
    ========================================================================== */
 
 .cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8mm;
   background-color: var(--accent);
   color: #ffffff;
   padding: 12mm 16mm 9mm;
   break-inside: avoid;
+}
+
+.cv-header-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cv-photo {
+  flex: 0 0 34mm;
+  width: 34mm;
+  height: 51mm;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
 }
 
 .cv-name {
