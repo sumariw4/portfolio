@@ -275,7 +275,7 @@ a:focus-visible {
 
 @page {
   size: A4;
-  margin: 12mm 0;
+  margin: 10mm 0;
 }
 
 @media print {
@@ -297,11 +297,15 @@ a:focus-visible {
   }
 
   .cv-header {
-    padding: 12mm 16mm 9mm;
+    padding: 9mm 16mm 7mm;
   }
 
   .cv-section {
-    margin-top: 6mm;
+    margin-top: 4mm;
+  }
+
+  .cv-entry {
+    margin-bottom: 2.5mm;
   }
 
   .cv > .cv-section {
