@@ -66,7 +66,8 @@ a:focus-visible {
    ========================================================================== */
 
 .cv-download {
-  width: 210mm;
+  width: 100%;
+  max-width: 210mm;
   margin: 8mm auto 0;
   text-align: right;
   font-size: 10pt;
@@ -85,7 +86,8 @@ a:focus-visible {
    ========================================================================== */
 
 .cv {
-  width: 210mm;
+  width: 100%;
+  max-width: 210mm;
   min-height: 297mm;
   margin: 10mm auto;
   padding-bottom: 10mm;
@@ -273,6 +275,65 @@ a:focus-visible {
 /* ==========================================================================
    Aturan cetak (A4)
    ========================================================================== */
+
+/* ==========================================================================
+   Tampilan layar kecil (ponsel dan tablet kecil)
+   ========================================================================== */
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 16px;
+  }
+
+  .cv {
+    margin: 16px auto;
+    padding-bottom: 8mm;
+  }
+
+  .cv-download {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .cv-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .cv-photo {
+    flex-basis: 96px;
+    width: 96px;
+    height: 144px;
+  }
+
+  .cv-name {
+    font-size: 22pt;
+  }
+
+  .cv-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-contact li:last-child {
+    grid-column: auto;
+  }
+
+  .cv > .cv-section {
+    padding: 0 16px;
+  }
+
+  .cv-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1mm;
+  }
+}
 
 @page {
   size: A4;
